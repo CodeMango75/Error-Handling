@@ -186,3 +186,19 @@ else:
 finally:
     print("This will always be executed.")
 ```
+
+## Hot Takes
+
+* When we give a class name of error to `except` block, this approach is known to **catch a specific exception by their class names**. For example if we print(p), a NameError will arise because p is not defined. 
+* It's recommended to give class names to except blocks when you know the specific types of exceptions that your code might encounter and when you have a clear plan for handling those exceptions differently.
+* This approach improves code clarity and maintainability, making it easier to understand how your program responds to different types of errors.
+
+### Except Exception as e
+
+we might want sometimes to use the expression **except Exception as e** which is breakdown as under:
+* `except` keyword: It signals the beginning of an exception-handling block.
+* `Exception` is a base class for all exceptions in Python. By specifying `Exception`, you're indicating that you want to catch any exception that inherits from the `Exception` class.
+* `as e`: This part allows you to assign the caught exception object to a variable named
+* `e`. You can use this variable `e` to access information about the exception, such as its type or the error message it contains.
+
+The use of `except Exception as e` is a common and widely accepted convention for handling exceptions in Python, but it's not a strict requirement. You can use different variable names instead of `e` if you prefer. 
